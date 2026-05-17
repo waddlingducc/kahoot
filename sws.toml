@@ -1,0 +1,19 @@
+[general]
+port = 5000
+root = "."
+compression = true
+compression-static = true
+cache-control-headers = true
+log-level = "warn"
+
+[advanced]
+
+[[advanced.headers]]
+source = "**/*.html"
+[advanced.headers.headers]
+Cache-Control = "no-cache"
+
+[[advanced.headers]]
+source = "/"
+[advanced.headers.headers]
+Cache-Control = "no-cache"
